@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+body {
+    background-color: #F7F1F0;
+    font-family: "Fraunces", serif;;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    transform: translate(-20%, -30%);
+}
+
+.title {
+    font-size: 50px;
+}
+
+.btn-design {
+    background-color: #c3a6a0;
+    color: black;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 3.5px #a15c38;
+}
+
+.btn-design:hover{
+    background-color: #a15c38;
+    box-shadow: 0 3.5px #c3a6a0;
+ 
+}
+.link {
+    text-decoration: none;
+    color: black !important;
+}
