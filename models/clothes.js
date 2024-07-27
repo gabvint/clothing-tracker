@@ -13,6 +13,12 @@ const clothesSchema = new mongoose.Schema({
     required: true
    }, 
 
+   materialType: {
+    type: String,
+    enum: ['Cotton', 'Polyester', 'Wool', 'Silk', 'Velvet', 'Lace', 'Spandex', 'Leather'],
+    required: true
+   },
+
    price: {
     type: Number, 
     required: true

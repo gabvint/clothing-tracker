@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Clothes</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+    <h1>Add Clothes to Inventory</h1>
+
+    <form action="/clothes" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color" required>
+
+        <label for="materialType">Material Type:</label>
+        <select name="materialType" id="materialType" required>
+            <option value="">Select Material</option>
+            <option value="Cotton">Cotton</option>
+            <option value="Polyester">Polyester</option>
+            <option value="Wool">Wool</option>
+            <option value="Silk">Silk</option>
+            <option value="Velvet">Velvet</option>
+            <option value="Lace">Lace</option>
+            <option value="Spandex">Spandex</option>
+            <option value="Leather">Leather</option>
+        </select>
+
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" required>
+
+        <label for="isOnSale">Item on Sale?</label>
+        <input type="checkbox" name="isOnSale" id="isOnSale" >
+        
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>

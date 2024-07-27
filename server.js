@@ -25,6 +25,8 @@ mongoose.connection.on('connected', () => {
 const Clothes = require('./models/clothes.js');
 
 // import controller 
+const clothesCntrl = require('./controllers/clothes.js');
+
 
 // middlware
 app.use(express.urlencoded({ extended: false}));
@@ -36,6 +38,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
+
+app.get('/clothes', clothesCntrl.index);
+
+app.get('/clothes/new', clothesCntrl.new);
+
+app.post('/clothes', clothesCntrl.addClothes);
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');

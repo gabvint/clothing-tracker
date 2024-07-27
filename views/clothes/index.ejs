@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Inventory</title>
+</head>
+<body>
+    <h1>Clothing Inventory</h1>
+
+    <ul>
+        <% clothes.forEach(item => { %>
+            <h3> <%= item.name %></h3>
+            <li> <%= item.color %> </li>
+            <li> <%= item.materialType %> </li>
+            <li> Price: <%= item.price %> </li>
+            <li> Quantity: <%= item.quantity %> </li>
+            <li> Item on Sale? <%= item.isOnSale %> </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
