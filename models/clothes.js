@@ -15,7 +15,7 @@ const clothesSchema = new mongoose.Schema({
 
    materialType: {
     type: String,
-    enum: ['Cotton', 'Polyester', 'Wool', 'Silk', 'Velvet', 'Lace', 'Spandex', 'Leather'],
+    enum: ['Cotton', 'Polyester', 'Wool', 'Silk', 'Velvet', 'Lace', 'Spandex', 'Leather', 'Denim'],
     required: true
    },
 

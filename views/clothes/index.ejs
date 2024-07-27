@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Inventory</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <h1>Clothing Inventory</h1>
+    <a href="/clothes/new">Add Clothes</a>
 
     <ul>
         <% clothes.forEach(item => { %>
@@ -16,7 +18,10 @@
             <li> Price: <%= item.price %> </li>
             <li> Quantity: <%= item.quantity %> </li>
             <li> Item on Sale? <%= item.isOnSale %> </li>
+            <a href="/clothes/<%= clothes._id %>">View</a>
         <% }) %>
     </ul>
+
+    <a href="/">Back to Home</a>
 </body>
 </html>

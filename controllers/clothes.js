@@ -11,6 +11,14 @@ const index = async (req, res) => {
     });
 }
 
+// GET - renders show page for individual clothes information (edit and delete)
+const show = async (req, res) => {
+    const foundClothes = await Clothes.findById(req.params.clothesId); 
+    res.render('clothes/show.ejs', {
+        clothes: foundClothes,
+    });
+
+}
 // GET - display form for adding new clothes
 const newClothes = (req, res) => {
     res.render('clothes/new.ejs')
@@ -24,6 +32,7 @@ const addClothes = async (req, res) => {
     } else{
         req.body.isOnSale = false
     }
+    res.redirect('/clothes')
     await Clothes.create(req.body)
 
 }
@@ -31,6 +40,7 @@ const addClothes = async (req, res) => {
 
 module.exports = {
     index,
+    show, 
     new: newClothes,
     addClothes,
 }

@@ -43,6 +43,8 @@ app.get('/clothes', clothesCntrl.index);
 
 app.get('/clothes/new', clothesCntrl.new);
 
+app.get('/clothes/:clothesId', clothesCntrl.show);
+
 app.post('/clothes', clothesCntrl.addClothes);
 
 app.listen(3000, () => {
