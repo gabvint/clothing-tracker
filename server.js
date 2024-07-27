@@ -45,7 +45,14 @@ app.get('/clothes/new', clothesCntrl.new);
 
 app.get('/clothes/:clothesId', clothesCntrl.show);
 
-app.post('/clothes', clothesCntrl.addClothes);
+app.post('/clothes', clothesCntrl.addItem);
+
+app.delete('/clothes/:clothesId', clothesCntrl.removeItem);
+
+app.get('/clothes/:clothesId/edit', clothesCntrl.editItem)
+
+app.put('/clothes/:clothesId', clothesCntrl.updateItem)
+
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');

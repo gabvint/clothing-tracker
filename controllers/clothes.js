@@ -20,12 +20,12 @@ const show = async (req, res) => {
 
 }
 // GET - display form for adding new clothes
-const newClothes = (req, res) => {
+const newItem = (req, res) => {
     res.render('clothes/new.ejs')
 }
 
 // POST - add new clothes data to database
-const addClothes = async (req, res) => {
+const addItem = async (req, res) => {
 
     if(req.body.isOnSale){
         req.body.isOnSale = true
@@ -37,10 +37,36 @@ const addClothes = async (req, res) => {
 
 }
 
+const removeItem = async (req, res) => {
+    await Clothes.findByIdAndDelete(req.params.clothesId)
+    res.redirect('/clothes')
+}
+
+const editItem = async (req, res) => {
+    const foundClothes = await Clothes.findById(req.params.clothesId)
+    res.render('clothes/edit.ejs', {
+        clothes: foundClothes,
+    });
+}
+
+const updateItem = async (req, res) => {
+    if(req.body.isOnSale){
+        req.body.isOnSale = true
+    } else{
+        req.body.isOnSale = false
+    }
+    await Clothes.findByIdAndUpdate(req.params.clothesId, req.body)
+    res.redirect(`/clothes/${req.params.clothesId}`)
+}
+
 
 module.exports = {
     index,
+    new: newItem,
     show, 
-    new: newClothes,
-    addClothes,
+    addItem,
+    removeItem,
+    editItem, 
+    updateItem,
+
 }

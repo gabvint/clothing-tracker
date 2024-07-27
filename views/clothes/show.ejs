@@ -10,5 +10,32 @@
     
     <h1> <%= clothes.name %></h1>
 
+    <% if (clothes.isOnSale) { %>
+        <p>This item is on sale!</p>
+        <% } else { %>
+         <p>This item is NOT on sale!</p>
+    <% } %>
+
+    <h3>Product Details</h3>
+    
+    <p>Price: $<%= clothes.price %></p>
+    <p>Quantity: <%= clothes.quantity %>pcs</p>
+    <p>Color: <%= clothes.color %></p>
+    <p>Material Type: <%= clothes.materialType %></p>
+
+
+    <!-- delete btn -->
+    <form action="/clothes/<%= clothes._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Item</button>
+    </form>
+
+    <!-- edit btn -->
+
+    <a href="/clothes/<%= clothes._id %>/edit">
+        Edit <%= clothes.name %>
+    </a>
+
+
+    <a href="/clothes">Back to Inventory</a>
 </body>
 </html>

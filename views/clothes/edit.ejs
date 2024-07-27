@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%= clothes.name %></title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+    <h1> <%= clothes.name %> </h1>
+
+
+    <form action="/clothes/<%= clothes._id %>?_method=PUT" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= clothes.name %>">
+
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color" value="<%= clothes.color %>">
+
+        <label for="materialType">Material Type:</label>
+        <select name="materialType" id="materialType">
+            <option value="<%= clothes.materialType %>"><%= clothes.materialType %></option>
+            <option value="Cotton">Cotton</option>
+            <option value="Polyester">Polyester</option>
+            <option value="Wool">Wool</option>
+            <option value="Silk">Silk</option>
+            <option value="Velvet">Velvet</option>
+            <option value="Lace">Lace</option>
+            <option value="Spandex">Spandex</option>
+            <option value="Leather">Leather</option>
+            <option value="Denim">Denim</option>
+        </select>
+
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" value="<%= clothes.price %>">
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" value="<%= clothes.quantity %>">
+
+        <label for="isOnSale">Item on Sale?</label>
+        <input type="checkbox" name="isOnSale" id="isOnSale" <% if(clothes.isOnSale){ %>checked<% } %>>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <a href="/clothes">Back to Inventory</a>
+
+
+</body>
+</html>
