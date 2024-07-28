@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
 body {
-    background-color: #F7F1F0;
-    font-family: "Fraunces", serif;;
+    background-color: #f7f1f0;
+    color: #654a4e;
+    font-family: "Fraunces", serif;
 }
 
 .title-container {
@@ -20,20 +21,127 @@ body {
 }
 
 .btn-design {
-    background-color: #c3a6a0;
-    color: black;
+    background-color: #d9dfe9;
+    color: #654a4e;
     padding: 10px 20px;
     width: 120px;
     border-radius: 10px;
-    box-shadow: 0 3.5px #a15c38;
+    box-shadow: 0 3.5px #654a4e;
 }
 
-.btn-design:hover{
-    background-color: #a15c38;
-    box-shadow: 0 3.5px #c3a6a0;
- 
+.jump:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-5px); 
+    cursor: pointer;
 }
+
 .link {
     text-decoration: none;
-    color: black !important;
+    color: #654a4e;
 }
+
+.page-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-content {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    min-width: 500px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+
+}
+
+.table-content thead tr {
+    background-color: #d9dfe9;  
+    text-align: left;
+}
+
+.table-content th,
+.table-content td {
+    padding: 10px 15px;
+}
+
+.table-content tbody tr {
+    border-bottom: 1px solid #d9dfe9;
+}
+
+.table-content tbody tr:nth-of-type(even){
+    background-color:rgba(255,255,255,0.5);
+}
+
+.table-content tbody tr:last-of-type {
+    border-bottom: 2px solid #d9dfe9;
+}
+
+.view-btn{
+    color: #654a4e;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.form-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9dfe9;
+    padding: 50px;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    border: 12px solid white;
+    border-radius: 10px;
+}
+
+.form-design label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.backto-btn {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    background-color: #d9dfe9;
+    color: #654a4e;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 3.5px #654a4e;
+
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    color: #654a4e; 
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Fraunces", serif;
+}
+
