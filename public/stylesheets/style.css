@@ -137,11 +137,46 @@ body {
 }
 
 .submit-btn {
+    background-color: #f7f1f0;
     color: #654a4e; 
     font-size: 15px;
     padding: 5px 15px;
-    border: none;
+    border: 1px solid #654a4e;
     border-radius: 5px;
     font-family: "Fraunces", serif;
 }
 
+.show-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.show-container {
+    margin-top: 100px ;
+    background-color: #d9dfe9;
+    border: 12px solid white;
+    border-radius: 10px;
+    min-width: 400px; 
+    min-height: 400px;
+    text-align: center;
+}
+
+.show-centered p {
+}
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+}   
+
+.edit-btn{
+   color: #654a4e;
+   text-decoration: none;
+   background-color: #f7f1f0;
+   padding: 5px 15px;
+   border-radius: 5px;
+   border: 1px solid #654a4e;
+
+}
